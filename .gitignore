@@ -218,3 +218,32 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ==========================================
+# ДОБАВЛЕНО ДЛЯ РЕПОЗИТОРИЯ NARYAD-AI (Node.js & Frontend & SQLite)
+# ==========================================
+
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Frontend build outputs
+frontend/dist/
+frontend/build/
+dist/
+
+# SQLite databases anywhere in project
+*.db
+*.sqlite
+*.sqlite3
+
+# Local Uploads
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# IDE configs
+.vscode/
+.idea/

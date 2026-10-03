@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-900 text-slate-100 antialiased font-sans select-none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Custom styles for glove-friendly industrial mobile interface */
+.touch-btn {
+  @apply min-h-[52px] active:scale-[0.98] transition-all duration-150 font-semibold rounded-xl flex items-center justify-center gap-2 shadow-md cursor-pointer;
+}
+
+.touch-btn-lg {
+  @apply min-h-[64px] text-lg active:scale-[0.97] transition-all duration-150 font-bold rounded-2xl flex items-center justify-center gap-3 shadow-lg cursor-pointer;
+}
+
+/* Pulse animation for emergency work orders */
+@keyframes emergency-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+  }
+}
+
+.emergency-glow {
+  animation: emergency-pulse 2s infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.5);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.8);
+}
